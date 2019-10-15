@@ -1,0 +1,22 @@
+.currencyItemButton {
+  min-width: 30px;
+  border-radius: 5px;
+  background-color: #f8f9faa6;
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+.favButton {
+  background-color: #f8f9fa59;
+}
+
+.itemContainer {
+  width: 51%;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background: lightgray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}

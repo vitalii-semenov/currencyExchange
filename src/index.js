@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { configureStore } from './store/configureStore';
+import Routes from './Routes';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './main.scss'
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const history = createBrowserHistory();
+const store = configureStore(history);
+
+render(
+  <Provider store={store}>
+    <Router history={history}>
+      <Routes/>
+    </Router>
+  </Provider>, document.getElementById('root'));
