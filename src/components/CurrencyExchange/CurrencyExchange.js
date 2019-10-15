@@ -59,7 +59,7 @@ const CurrencyExchange = (props: Object) => {
             </div>
             <div className="inputContainer">
               <InputText
-                value={valueFrom}
+                value={valueFrom === 0 ? '': valueFrom}
                 onChange={(e) => setDefaultValueFrom(e.target.value)}
               />
             </div>
@@ -76,7 +76,7 @@ const CurrencyExchange = (props: Object) => {
             </div>
             <div className="inputContainer">
               <InputText
-                value={valueTo}
+                value={valueTo === 0 ? '' : valueTo}
                 onChange={(e) => setDefaultValueTo(e.target.value)}
               />
             </div>

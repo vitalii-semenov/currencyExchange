@@ -8,8 +8,8 @@ class CurrencyExchangePage extends Component {
   state = {
     defaultPlaceholderFrom: '',
     defaultPlaceholderTo: 'eur',
-    valueFrom: 0,
-    valueTo: 0,
+    valueFrom: null,
+    valueTo: null,
     currenciesList: [],
     currenciesWithRate: {},
     currentRate: 0,
